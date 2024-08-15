@@ -28,6 +28,7 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
+		<dozer.version>7.0.0</dozer.version>
 	</properties>
 	
 	<repositories>
@@ -53,6 +54,13 @@
     		<groupId>mysql</groupId>
    			 <artifactId>mysql-connector-java</artifactId>
     		<version>8.0.33</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.github.dozermapper/dozer-core -->
+		<dependency>
+    		<groupId>com.github.dozermapper</groupId>
+    		<artifactId>dozer-core</artifactId>
+    		<version>${dozer.version}</version>
 		</dependency>
 
 
