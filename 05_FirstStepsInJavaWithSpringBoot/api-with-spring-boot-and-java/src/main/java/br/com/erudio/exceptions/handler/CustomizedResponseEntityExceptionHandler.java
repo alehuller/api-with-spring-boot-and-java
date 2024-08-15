@@ -12,7 +12,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import br.com.erudio.exceptions.ExceptionResponse;
 import br.com.erudio.exceptions.ResourceNotFoundException;
-import br.com.erudio.exceptions.UnsupportedMathOperationException;
 
 @ControllerAdvice
 @RestController
