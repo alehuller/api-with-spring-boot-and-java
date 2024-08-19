@@ -56,6 +56,16 @@
     		<version>8.0.33</version>
 		</dependency>
 		
+		<dependency>
+    		<groupId>org.flywaydb</groupId>
+    		<artifactId>flyway-core</artifactId>
+		</dependency>
+		
+		<dependency>
+    		<groupId>org.flywaydb</groupId>
+    		<artifactId>flyway-mysql</artifactId>
+		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/com.github.dozermapper/dozer-core -->
 		<dependency>
     		<groupId>com.github.dozermapper</groupId>
