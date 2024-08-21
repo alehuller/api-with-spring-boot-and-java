@@ -28,7 +28,6 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
-		<dozer.version>7.0.0</dozer.version>
 	</properties>
 	
 	<repositories>
@@ -87,7 +86,7 @@
 		<dependency>
     		<groupId>com.github.dozermapper</groupId>
     		<artifactId>dozer-core</artifactId>
-    		<version>${dozer.version}</version>
+    		<version>7.0.0</version>
 		</dependency>
 
 
