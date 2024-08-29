@@ -1,3 +1,5 @@
+cors:
+  originPatterns: http://localhost:3000,http://localhost:8080,https://erudio.com.br
 spring:
   application:
     name: api-with-spring-boot-and-java
