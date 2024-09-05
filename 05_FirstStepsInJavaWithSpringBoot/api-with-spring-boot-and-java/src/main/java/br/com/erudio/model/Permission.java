@@ -13,9 +13,10 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "permission")
-public class Permission implements GrantedAuthority, Serializable{
+public class Permission implements GrantedAuthority, Serializable {
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -23,8 +24,11 @@ public class Permission implements GrantedAuthority, Serializable{
 	@Column
 	private String description;
 	
-	public Permission() {
-		super();
+	public Permission() {}
+
+	@Override
+	public String getAuthority() {
+		return this.description;
 	}
 
 	public Long getId() {
@@ -72,10 +76,5 @@ public class Permission implements GrantedAuthority, Serializable{
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
-	}
-
-	@Override
-	public String getAuthority() {
-		return this.description;
 	}
 }

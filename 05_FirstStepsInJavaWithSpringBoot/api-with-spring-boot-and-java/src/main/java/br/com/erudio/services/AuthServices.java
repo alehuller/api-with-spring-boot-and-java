@@ -15,10 +15,10 @@ import br.com.erudio.security.jwt.JwtTokenProvider;
 
 @Service
 public class AuthServices {
-	
+
 	@Autowired
 	private AuthenticationManager authenticationManager;
-	
+
 	@Autowired
 	private JwtTokenProvider tokenProvider;
 	
@@ -26,11 +26,12 @@ public class AuthServices {
 	private UserRepository repository;
 	
 	@SuppressWarnings("rawtypes")
-	public ResponseEntity signIn(AccountCredentialsVO data) {
+	public ResponseEntity signin(AccountCredentialsVO data) {
 		try {
 			var username = data.getUsername();
 			var password = data.getPassword();
-			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+			authenticationManager.authenticate(
+				new UsernamePasswordAuthenticationToken(username, password));
 			
 			var user = repository.findByUsername(username);
 			
@@ -44,5 +45,18 @@ public class AuthServices {
 		} catch (Exception e) {
 			throw new BadCredentialsException("Invalid username/password supplied!");
 		}
+	}
+	
+	@SuppressWarnings("rawtypes")
+	public ResponseEntity refreshToken(String username, String refreshToken) {
+		var user = repository.findByUsername(username);
+		
+		var tokenResponse = new TokenVO();
+		if (user != null) {
+			tokenResponse = tokenProvider.refreshToken(refreshToken);
+		} else {
+			throw new UsernameNotFoundException("Username " + username + " not found!");
+		}
+		return ResponseEntity.ok(tokenResponse);
 	}
 }
