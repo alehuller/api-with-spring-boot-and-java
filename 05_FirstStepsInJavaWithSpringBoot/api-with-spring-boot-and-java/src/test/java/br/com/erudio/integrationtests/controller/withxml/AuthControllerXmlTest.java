@@ -47,7 +47,7 @@ public class AuthControllerXmlTest extends AbstractIntegrationTest{
 	}
 	
 	@Test
-	@Order(1)
+	@Order(2)
 	public void testRefresh() throws JsonMappingException, JsonProcessingException {
 		AccountCredentialsVO user = new AccountCredentialsVO("leandro", "admin123");
 		
