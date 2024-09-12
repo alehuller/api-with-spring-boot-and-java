@@ -12,6 +12,6 @@ import br.com.erudio.model.Person;
 public interface PersonRepository extends JpaRepository<Person, Long>{
 
 	@Modifying
-	@Query("Update Person p p.enabled = false WHERE p.id =:id")
+	@Query("Update Person p SET p.enabled = false WHERE p.id =:id")
 	void disablePerson(@Param("id") Long id);
 }
