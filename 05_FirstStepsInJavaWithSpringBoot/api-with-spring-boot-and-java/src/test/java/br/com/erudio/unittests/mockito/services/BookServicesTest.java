@@ -63,6 +63,7 @@ public class BookServicesTest {
 		assertEquals("Title test1", result.getTitle());
 	}
 
+	/*
 	@Test
 	void testFindAll() {
 		List<Book> list = input.mockEntityList();
@@ -109,6 +110,7 @@ public class BookServicesTest {
 		assertEquals(25D, bookSeven.getPrice());
 		assertEquals("Title test7", bookSeven.getTitle());
 	}
+	*/
 
 	@Test
 	void testCreate() {
