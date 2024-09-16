@@ -7,8 +7,9 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class BookVO implements Serializable{
+ 
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long id;
 	private String author;
 	private Date launchDate;
@@ -61,7 +62,7 @@ public class BookVO implements Serializable{
 	@Override
 	public int hashCode() {
 		final int prime = 31;
-		int result = 1;
+		int result = super.hashCode();
 		result = prime * result + ((author == null) ? 0 : author.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((launchDate == null) ? 0 : launchDate.hashCode());
@@ -74,7 +75,7 @@ public class BookVO implements Serializable{
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
+		if (!super.equals(obj))
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
