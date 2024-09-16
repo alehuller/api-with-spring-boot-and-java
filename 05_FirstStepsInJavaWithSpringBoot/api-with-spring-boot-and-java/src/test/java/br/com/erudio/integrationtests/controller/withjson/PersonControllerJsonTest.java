@@ -285,7 +285,7 @@ public class PersonControllerJsonTest extends AbstractIntegrationTest{
 	}
 	
 	@Test
-	@Order(6)
+	@Order(7)
 	public void testFindByName() throws JsonMappingException, JsonProcessingException {
 		
 		var content = given().spec(specification)
