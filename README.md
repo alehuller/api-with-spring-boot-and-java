@@ -15,7 +15,11 @@ A aplicação consiste em uma API RESTFul de CRUD de Pessoas e Livros.
 - Swagger
 - JWT
 - Mockito
+- JUnit
 - ReactJS
+
+## Banco de Dados
+- MySQL
 
 # Autor
 
